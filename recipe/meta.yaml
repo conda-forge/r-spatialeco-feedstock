@@ -1,4 +1,4 @@
-{% set version = "1.3-3" %}
+{% set version = "1.3-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spatialEco_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatialEco/spatialEco_{{ version }}.tar.gz
-  sha256: 2a760fc0835059e171cc1bb211d00d594a7aa21f59a0d696b9e982e49361ad31
+  sha256: d4fb211124edf828333841c44a5af01165c53d89af460144214d81e3c13983c7
 
 build:
   merge_build_host: true  # [win]
