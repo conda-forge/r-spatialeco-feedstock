@@ -24,48 +24,41 @@ requirements:
   build:
     - {{ posix }}zip               # [win]
   host:
-    - r-base >=3.6
+    - r-base
     - r-envstats
     - r-mass
     - r-rann
     - r-rcurl
     - r-spatialpack >=0.3
     - r-cluster
-    - r-dplyr
-    - r-exactextractr
-    - r-maptools
+    - r-ks
     - r-mgcv
-    - r-raster
     - r-readr
-    - r-rgeos
     - r-rms
     - r-sf
-    - r-sp
-    - r-spatstat
+    - r-spatstat.explore
+    - r-spatstat.geom >=3.0_3
     - r-spdep
+    - r-terra
     - r-yaimpute
   run:
-    - r-base >=3.6
+    - r-base
     - r-envstats
     - r-mass
     - r-rann
     - r-rcurl
     - r-spatialpack >=0.3
     - r-cluster
-    - r-dplyr
-    - r-exactextractr
-    - r-maptools
+    - r-ks
     - r-mgcv
-    - r-raster
     - r-readr
-    - r-rgeos
     - r-rms
     - r-sf
-    - r-sp
-    - r-spatstat
+    - r-spatstat.explore
+    - r-spatstat.geom >=3.0_3
     - r-spdep
+    - r-terra
     - r-yaimpute
-
 test:
   commands:
     - $R -e "library('spatialEco')"           # [not win]
