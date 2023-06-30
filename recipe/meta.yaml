@@ -23,42 +23,16 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-envstats
-    - r-mass
-    - r-rann
-    - r-rcurl
-    - r-spatialpack >=0.3
-    - r-cluster
-    - r-ks
-    - r-mgcv
-    - r-readr
-    - r-rms
     - r-sf
-    - r-spatstat.explore
-    - r-spatstat.geom >=3.0_3
-    - r-spdep
     - r-terra
-    - r-yaimpute
   run:
     - r-base
-    - r-envstats
-    - r-mass
-    - r-rann
-    - r-rcurl
-    - r-spatialpack >=0.3
-    - r-cluster
-    - r-ks
-    - r-mgcv
-    - r-readr
-    - r-rms
     - r-sf
-    - r-spatstat.explore
-    - r-spatstat.geom >=3.0_3
-    - r-spdep
     - r-terra
-    - r-yaimpute
+
 test:
   commands:
     - $R -e "library('spatialEco')"           # [not win]
@@ -66,7 +40,7 @@ test:
 
 about:
   home: https://github.com/jeffreyevans/spatialEco
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Utilities to support spatial data manipulation, query, sampling and modelling. Functions include models for species population density, download utilities for climate and global deforestation spatial products, spatial smoothing, multivariate separability, point process model for creating pseudo- absences and sub-sampling,
     polygon and point-distance landscape metrics, auto-logistic model, sampling models, cluster optimization, statistical exploratory tools and raster-based metrics.
   license_family: GPL3
