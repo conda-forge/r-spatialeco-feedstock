@@ -1,4 +1,4 @@
-{% set version = "2.0-2" %}
+{% set version = "2.0-3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spatialEco_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatialEco/spatialEco_{{ version }}.tar.gz
-  sha256: 533b8e938df196609a6c85270c0bdc279287c5ee222de9e05ac745713a3ab57c
+  sha256: 419b41b8f031b166c014d8952e85e23ac7d102b4c84e44a26e3d6feb9d67b745
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
