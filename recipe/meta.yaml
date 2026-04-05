@@ -1,18 +1,18 @@
-{% set version = "2.0-3" %}
+{% set version = "2.0-4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-spatialeco
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/spatialEco_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatialEco/spatialEco_{{ version }}.tar.gz
-  sha256: 419b41b8f031b166c014d8952e85e23ac7d102b4c84e44a26e3d6feb9d67b745
+  sha256: f2a8bc151f9d4777495e795b09ac3d11babbc394c841606c9240dbfa40aa38ce
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -39,8 +39,8 @@ test:
 about:
   home: https://github.com/jeffreyevans/spatialEco
   license: GPL-3.0-only
-  summary: Utilities to support spatial data manipulation, query, sampling and modelling. Functions include models for species population density, download utilities for climate and global deforestation spatial products, spatial smoothing, multivariate separability, point process model for creating pseudo- absences and sub-sampling,
-    polygon and point-distance landscape metrics, auto-logistic model, sampling models, cluster optimization, statistical exploratory tools and raster-based metrics.
+  summary: Utilities to support spatial data manipulation, query, sampling and modelling. Functions include models for species population density, download utilities for climate and global deforestation spatial products, spatial smoothing, multivariate separability, point process model for creating pseudo- absences and
+    sub-sampling, polygon and point-distance landscape metrics, auto-logistic model, sampling models, cluster optimization, statistical exploratory tools and raster-based metrics.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
